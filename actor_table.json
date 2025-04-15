@@ -1,0 +1,30 @@
+[
+  {
+    "ActorID": 1,
+    "FirstName": "Tom",
+    "LastName": "Cruise",
+    "Gender": "M",
+    "Oscar": 1
+  },
+  {
+    "ActorID": 2,
+    "FirstName": "Willem",
+    "LastName": "Dafoe",
+    "Gender": "M",
+    "Oscar": 0
+  },
+  {
+    "ActorID": 3,
+    "FirstName": "Anne",
+    "LastName": "Hathaway",
+    "Gender": "F",
+    "Oscar": 2
+  },
+  {
+    "ActorID": 5,
+    "FirstName": "Keira",
+    "LastName": "Knightley",
+    "Gender": "F",
+    "Oscar": 4
+  }
+]

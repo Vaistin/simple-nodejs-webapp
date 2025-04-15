@@ -1,0 +1,10 @@
+<%- include('../partials/head_admin.ejs') %>
+<form data-action="/delete" method="post" id="delete_form">
+  <br>Input the ID of the actor you want to delete:<br>
+  <input type="number" name="id_to_delete" id="id_to_delete" required><br><br>
+  <span id="error_message"></span><br>
+  <button type="submit">Delete</button>
+  <input type="hidden" name="DataSource" id="DataSource" value="<%= DataSource %>" required>
+</form>
+<script src="/public/js/validation.js"></script>
+<%- include('../partials/foot.ejs') %>

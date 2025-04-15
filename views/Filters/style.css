@@ -1,0 +1,15 @@
+.content-wrapper{
+    display: flex;
+    padding-right: 20px;
+}
+
+#filter_form{
+    flex:1;
+    padding: 20px;
+}
+#grid_container{
+    flex:1;
+    padding: 20px;
+    height:fit-content;
+    visibility:hidden;
+}

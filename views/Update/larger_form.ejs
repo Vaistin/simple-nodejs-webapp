@@ -1,0 +1,8 @@
+<%- include('../partials/head_admin') %>
+  <form action="/edit", id="edit_form" method="post">
+    <input type="hidden" name="DataSource" id="DataSource" value="<%= DataSource %>" required>
+    ActorID: <input type="number" id="id_inputed" name="ActorIDInputed" readonly value=<%= id %>><br><br>
+  </form>
+  <span id="error_message"></span><br>
+  <script src="/public/js/validation.js"></script>
+<%- include('../partials/foot.ejs') %>

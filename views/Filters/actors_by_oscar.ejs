@@ -1,0 +1,38 @@
+<%- include('../partials/head_'+head) %>
+<script>
+  localStorage.setItem('DataSource', 'SQL');
+</script>
+<div class="content-wrapper">
+<form id="filter_form">
+    ActorID: <input type="number" name="ActorID"><br><br>
+    Year recieved: <input type="number" name="Year_recieved"><br><br>
+    Award: <select name="Award">
+      <option value=""></option>
+    </select><br><br>
+    <button type="button"  onclick="renderActorsByOscar()">Filter</button>
+    <input type="reset" onclick="document.getElementById('grid_container').style.visibility='hidden'">
+    <input type="hidden" value="SQL" name="DataSource" required>
+</form>
+
+<div class="container" id="grid_container">
+    <div class="row">
+      <div class="col">
+        <b>ActorID</b>
+      </div>
+      <div class="col">
+        <b>First name</b>
+      </div>
+      <div class="col">
+        <b>Last name</b>
+      </div>
+      <div class="col">
+        <b>Gender</b>
+      </div>
+      <div class="col">
+        <b>Oscars</b>
+      </div>
+    </div>
+    <div id="actorGridContainer"></div>
+  </div>
+</div><!-- Closes content wrapper -->
+<%- include('../partials/foot.ejs') %>

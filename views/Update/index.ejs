@@ -1,0 +1,10 @@
+<%- include('../partials/head_admin') %>
+  <form action="/edit_request" method="get" id="edit_request_form">
+    <br>Input the ID of the actor you want to edit:<br>
+    <input type="number" name="id_to_edit" id="id_to_edit" required><br><br>
+    <button type="submit" id="edit_button">Edit</button>
+    <input type="hidden" name="DataSource" id="DataSource" value="<%= DataSource %>" required>
+  </form>
+  <span id="error_message"></span><br>
+  <script src="/public/js/validation.js"></script>
+<%- include('../partials/foot.ejs') %>

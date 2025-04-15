@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Log in</h1>
+    <form id="login_form" action="/login" method="post">
+        Username: <input type="text" name="username" required><br><br>
+        Password: <input type="password" name="password" required><br><br>
+        <button type="submit">Log in</button>
+        <button type="reset">Reset</button>
+        <button type="button" onclick="location.href='/sign_up'">Sign up</button>
+        <button type="button" onclick="password_retrieval()">Forgot your password?</button>
+        <div id="damn">Damn, that sucks. Maybe you should write it down next time.</div>
+        <style>
+            #damn{
+                color:white;
+                visibility: visible;
+            }
+        </style>
+    </form>
+</body>
+</html>
+<script>
+    function password_retrieval(){
+        const damn = document.getElementById('damn');
+        damn.setAttribute('style', "color: red;");
+    }
+</script>

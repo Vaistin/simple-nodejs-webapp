@@ -1,0 +1,26 @@
+<%- include('../partials/head_admin') %>
+<div class="content-wrapper">
+    <form id="manager_form" action="/manager_action" method="post">
+        <br>Input a username<br>
+        <input type="text" name="search_bar" id="search_bar"><br><br>
+        <span id="error_message"></span><br>
+        <button type="button" id="search_btn" onclick="search_users()">Search</button>
+        <button type="submit" id="promote_btn" onclick="setActionType('promote')">Promote</button>
+        <button type="submit" id="remove_btn" onclick="setActionType('remove')">Remove</button>
+        <button type="reset">Reset</button>
+        <input type="hidden" id="action_type">
+    </form>
+    <div class="container" id="grid_container">
+        <div class="row">
+            <div class="col">
+                <b>Username</b>
+            </div>
+            <div class="col">
+                <b>Access level</b>
+            </div>
+        </div>
+        <div id="user_grid"></div>
+    </div>
+</div>
+<script src="/public/js/manage.js"></script>
+<%- include('../partials/foot.ejs') %>

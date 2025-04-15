@@ -1,0 +1,24 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background-color: lightgreen;
+}
+.container {
+  background-color: beige;
+  margin-top: 20px;
+}
+.content {
+  flex: 1;
+}
+.col {
+  text-align: center;
+}
+.card {
+  background-color: aqua;
+  width: 100%;
+}
+.footer {
+  flex-shrink: 0;
+}

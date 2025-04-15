@@ -1,0 +1,19 @@
+<%- include('../partials/head_admin') %>
+
+<form action="/submit" method="post">
+  <br>
+  ActorID: <input type="number" name="ActorID" value="<%= actorID %>" readonly><br><br>
+  First name: <input type="text" name="FirstName" required><br><br>
+  Last name: <input type="text" name="LastName" required><br><br>
+  Gender:<br><br>
+  <label for="M">Male</label>
+  <input type="radio" name="Gender" id="M" value="M" checked><br>
+  <label for="F">Female</label>
+  <input type="radio" name="Gender" id="F" value="F"><br><br>
+  Number of Oscars: <input type="number" name="Oscar" required><br><br>
+  <button type="submit">Submit</button>
+  <input type="reset">
+  <input type="hidden" value="<%= DataSource %>" name="DataSource" required>
+</form>
+
+<%- include('../partials/foot.ejs') %>

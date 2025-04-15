@@ -1,0 +1,57 @@
+<%- include('../partials/head_'+head) %>
+<script>
+  localStorage.setItem('DataSource', 'SQL');
+</script>
+<div class="content-wrapper">
+<form id="filter_form">
+    ActorID: <input type="number" name="ActorID"><br><br>
+    First name: <input type="text" name="FirstName"><br><br>
+    Last name: <input type="text" name="LastName"><br><br>
+    Gender:<br><br>
+    <label for="M">Male</label>
+    <input type="radio" name="Gender" id="M" value="M"><br>
+    <label for="F">Female</label>
+    <input type="radio" name="Gender" id="F" value="F"><br><br>
+    Number of Oscars: <input type="number" name="Oscar"><br><br>
+    Year recieved: <input type="number" name="Year_recieved"><br><br>
+    Award: <select name="Award">
+      <option value=""></option>
+    </select><br><br>
+    <button type="button"  onclick="renderCombinedSearch()">Filter</button>
+    <input type="reset" onclick="document.getElementById('grid_container').style.visibility='hidden'">
+    <input type="hidden" value="SQL" name="DataSource" required>
+</form>
+
+<div class="container" id="grid_container">
+  <div class="row">
+    <div class="col">
+      <b>ActorID</b>
+    </div>
+    <div class="col">
+      <b>First name</b>
+    </div>
+    <div class="col">
+      <b>Last name</b>
+    </div>
+    <div class="col">
+      <b>Gender</b>
+    </div>
+    <div class="col">
+      <b>Oscars</b>
+    </div>
+    <div class="col">
+      <b>Year recived</b>
+    </div>
+    <div class="col">
+      <b>Award</b>
+    </div>
+  </div>
+  <div id="actorGridContainer"></div>
+</div>
+</div><!-- Closes content wrapper -->
+<style>
+    #grid_container{
+        flex:3;
+    }
+</style>
+<%- include('../partials/foot.ejs') %>
